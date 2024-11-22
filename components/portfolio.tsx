@@ -269,7 +269,7 @@ export function PortfolioComponent() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a 
-                      href="https://github.com"
+                      href="https://github.com/mdkaif10"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 hover:bg-[#2A2D2E] rounded-md transition-colors"
@@ -310,7 +310,7 @@ export function PortfolioComponent() {
                   title: 'SDE Intern',
                   company: 'ICM Guwahati',
                   period: '2024',
-                  description: 'Working on full-stack development projects.'
+                  description: 'Worked on a Office Management System Project.'
                 },
                 {
                   title: 'Blockchain Head',
@@ -323,6 +323,12 @@ export function PortfolioComponent() {
                   company: 'Nxtera Services',
                   period: '2023',
                   description: 'Developed internal software solutions and managed systems.'
+                },
+                {
+                  title: 'Site Supervisor, IT Manager',
+                  company: 'Aptech',
+                  period: '2022-2023',
+                  description: 'Supervised site operations and managed IT resources for exam administration. '
                 }
               ].map((exp, index) => (
                 <motion.div
