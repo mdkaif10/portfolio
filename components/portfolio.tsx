@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import {
@@ -9,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronRight, Github, Linkedin, Mail, CircleDot, FileCode2, Folder, FolderOpen, File, X, Maximize2, Minus, Star, Terminal, Moon, Sun, Coffee, Search, Settings, Download } from 'lucide-react'
+import { ChevronRight, Github, Linkedin, Mail, CircleDot, FileCode2, Folder, FolderOpen, File, X, Maximize2, Minus, Star, Terminal, Moon, Sun, Coffee, Search, Download } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import confetti from 'canvas-confetti'
@@ -190,7 +191,7 @@ export function PortfolioComponent() {
     )
   }
 
-  const SkillBar = ({ skill, level }) => (
+  const SkillBar = ({ skill, level }: { skill: string, level: number }) => (
     <div className="mb-2">
       <div className="flex justify-between mb-1">
         <span>{skill}</span>
@@ -213,10 +214,12 @@ export function PortfolioComponent() {
         return (
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <img 
+              <Image 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/eb455bc8-daa8-4329-bee6-e10e7eeeb0ef.jpg-zstCwpxboMf501rhZBmpGCZsd6ZTfs.jpeg" 
                 alt="MD KAIF"
-                className="w-32 h-32 rounded-full object-cover border-4 border-[#007ACC]"
+                width={128}
+                height={128}
+                className="rounded-full object-cover border-4 border-[#007ACC]"
               />
               <div>
                 <h1 className="text-4xl font-bold text-white mb-2">
